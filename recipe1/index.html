@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ajax Data</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+          $("#choice").change(function(){
+          	//alert ("Yes, we change the section " + $(this).val());
+
+          if($(this).val()!=''){
+          	$.get(
+          'data.php',
+          {what:$(this).val()},
+          function(data){
+          	$("#result").html(data);
+          		
+          }
+          );
+          }
+          });
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<p>show list of:
+
+<select  id="choice">
+	<option value="">select</option>
+	<option value="good">Good guyes</option>
+	<option value="bad">Bad guyes</option>
+</select>
+
+		</p>
+		<p id="result"></p>
+	</form>
+</body>
+</html>
