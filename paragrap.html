@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		
+		$(document).ready(function(){
+
+			$("button").click(function(){
+				var pars = $("p");
+			for(i=0; i<pars.length; i++){
+				alert(pars[i].innerHTML);
+			}
+			})
+		})
+	</script>
+	<button>click here</button>
+	<p>This is first paragrap</p>
+	<p>This is secend paragrap</p>
+	<p>This is third paragrap</p>
+	<p>This is forth paragrap</p>
+</body>
+</html>
